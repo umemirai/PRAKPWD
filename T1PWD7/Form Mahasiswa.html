@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Form Mahasiswa</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        form {
+            width: 700px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: left;
+            margin-bottom: 20px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        fieldset {
+            border: 1px solid #ddd;
+            margin-bottom: 20px;
+            padding: 10px;
+        }
+
+        legend {
+            font-weight: bold;
+            padding: 5px;
+        }
+
+        label {
+            display: inline-block;
+            width: 150px;
+            text-align: start;
+            margin-bottom: 8px;
+        }
+
+        label[for="alamat"] {
+            vertical-align: top;
+            padding-top: 5px;
+        }
+
+        select[id="kelas"] {
+            margin-left: 15px;
+        }
+
+        input[type="text"],
+        textarea {
+            width: 300px;
+            padding: 12px;
+            margin-bottom: 10px;
+            margin-left: 15px;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        input[type="radio"] {
+            margin-right: 5px;
+            margin-left: 15px;
+        }
+
+        input[type="checkbox"] {
+            margin-right: 5px;
+        }
+
+        button,
+        input[type="submit"],
+        input[type="reset"] {
+            background-color: #00a606;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+        button:hover,
+        input[type="submit"]:hover,
+        input[type="reset"]:hover {
+            background-color: #33cf3b;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="#" method="post">
+        <h1>Form Mahasiswa</h1>
+        <fieldset>
+            <legend>Data Mahasiswa</legend>
+            <label for="nama">Nama:</label>
+            <input type="text" id="nama" name="nama"><br>
+            <label for="npm">NPM:</label>
+            <input type="text" id="npm" name="npm"><br>
+            <label for="kelas">Kelas:</label>
+            <select id="kelas" name="kelas">
+                <option value="IF-1">IF-1</option>
+                <option value="IF-2">IF-2</option>
+                <option value="IF-3">IF-3</option>
+            </select><br>
+            <label>Jenis Kelamin:</label>
+            <input type="radio" id="pria" name="jenis_kelamin" value="pria"> <label for="pria"
+                style="width: auto;">Pria</label>
+            <input type="radio" id="wanita" name="jenis_kelamin" value="wanita"> <label for="wanita"
+                style="width: auto;">Wanita</label><br>
+        </fieldset>
+        <fieldset>
+            <legend>Tempat Tinggal Mahasiswa</legend>
+            <label for="alamat">Alamat:</label>
+            <textarea id="alamat" name="alamat"></textarea><br>
+            <label for="kecamatan">Kecamatan:</label>
+            <input type="text" id="kecamatan" name="kecamatan"><br>
+            <label for="kabupaten">Kabupaten/Kotamadya:</label>
+            <input type="text" id="kabupaten" name="kabupaten"><br>
+            <label for="provinsi">Provinsi:</label>
+            <input type="text" id="provinsi" name="provinsi"><br>
+            <label for="kode_pos">Kode Pos:</label>
+            <input type="text" id="kode_pos" name="kode_pos"><br>
+        </fieldset>
+        <fieldset>
+            <legend>Lain-lainnya</legend>
+            <label>Bahasa Pemrograman:</label><br>
+            <input type="checkbox" id="c" name="bahasa[]" value="c"> <label for="c" style="width: auto;">C/C++</label>
+            <input type="checkbox" id="go" name="bahasa[]" value="go"> <label for="go" style="width: auto;">Go
+                Lang</label>
+            <input type="checkbox" id="python" name="bahasa[]" value="python"> <label for="python"
+                style="width: auto;">Python</label>
+            <input type="checkbox" id="lainnya" name="bahasa[]" value="lainnya"> <label for="lainnya"
+                style="width: auto;">Lainnya</label><br>
+            <input type="checkbox" id="php" name="bahasa[]" value="php"> <label for="php"
+                style="width: auto;">PHP</label>
+            <input type="checkbox" id="javascript" name="bahasa[]" value="javascript"> <label for="javascript"
+                style="width: auto;">Javascript</label>
+            <input type="checkbox" id="ruby" name="bahasa[]" value="ruby"> <label for="ruby"
+                style="width: auto;">Ruby</label><br>
+            <label>Kegiatan:</label><br>
+            <input type="checkbox" id="organisasi_dalam" name="kegiatan[]" value="organisasi_dalam"> <label
+                for="organisasi_dalam" style="width: auto;">Organisasi Kemahasiswaan</label>
+            <input type="checkbox" id="olahraga" name="kegiatan[]" value="olahraga"> <label for="olahraga"
+                style="width: auto;">Bidang Olahraga</label>
+            <input type="checkbox" id="lainnya_kegiatan" name="kegiatan[]" value="lainnya"> <label
+                for="lainnya_kegiatan" style="width: auto;">Lainnya</label><br>
+            <input type="checkbox" id="organisasi_luar" name="kegiatan[]" value="organisasi_luar"> <label
+                for="organisasi_luar" style="width: auto;">Organisasi di Luar Kampus</label>
+            <input type="checkbox" id="seni" name="kegiatan[]" value="seni"> <label for="seni"
+                style="width: auto;">Bidang Seni</label><br>
+        </fieldset>
+        <input type="reset" value="Reset">
+        <input type="submit" value="Submit">
+    </form>
+</body>
+
+</html>
